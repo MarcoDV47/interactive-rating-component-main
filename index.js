@@ -2,6 +2,7 @@ const spanItem = document.querySelector("span.empty-rate");
 const buttonItem = document.querySelector("button.btn-1");
 const form = document.querySelector("form");
 const thanksPage = document.querySelector("div.thanks-container");
+const ratingPage = document.querySelector("div.rating-container");
 const ratingButtons = document.querySelectorAll("input[type='radio']");
 let test = "";
 
@@ -17,6 +18,7 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     if (test) {
         thanksPage.classList.remove("hidden");
+        ratingPage.classList.add("hidden");
     }
     
 })

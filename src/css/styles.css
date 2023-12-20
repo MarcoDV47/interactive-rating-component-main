@@ -6,11 +6,11 @@ main {
     position: relative;
     width: 33em;
     height: 50vh;
+    margin: 0 auto;
 }
 
 body {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -22,7 +22,8 @@ div.container {
     background: linear-gradient(#212830, #171E28);
     padding: 2em;
     border-radius: 30px;
-    max-width: 33em;
+    width: 100%;
+    margin: 1em;
 }
 
 div.rating-container img {
@@ -42,18 +43,23 @@ div.rating-container p.text-1 {
     margin-bottom: 1em;
 }
 
+ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 li.rating-item {
     position: relative;
     display: inline-block;
 }
 
 input[type="radio"] {
-    width: 60px;
-    height: 60px;
+    width: 4em;
+    height: 4em;
     appearance: none;
     background-color: var(--neutral-3);
     border-radius: 50%;
-    margin: 0 1em 1em 1em;
+    margin-bottom: 1em;
 }
 
 input[type="radio"]:hover {
@@ -71,7 +77,6 @@ label.rate-number {
     bottom: 60%;
     transform: translate(50%, 50%);
     color: var(--neutral-2);
-    cursor: inherit;
 }
 
 input[type="radio"]:hover+label.rate-number,
@@ -97,11 +102,8 @@ button.btn-1:hover {
     background-color: var(--neutral-1);
 }
 
-/* Other part */
+/* Thanks page */
 
-.hidden {
-    display: none;
-}
 div.thanks-container {
     max-width: 40em;
     height: 25.5em;
@@ -112,7 +114,8 @@ div.thanks-container {
 div.thanks-container img {
     margin-bottom: 1.5em;
 }
-div.thanks-container p.rating-text{
+
+div.thanks-container p.rating-text {
     color: var(--primary-1);
     width: max-content;
     background-color: var(--neutral-3);
@@ -120,10 +123,23 @@ div.thanks-container p.rating-text{
     border-radius: 50px;
     margin: 0 auto 2em;
 }
-div.thanks-container h2{
+
+div.thanks-container h2 {
     color: var(--neutral-1);
     margin-bottom: 0.5em;
 }
-div.thanks-container p.text-2{
+
+div.thanks-container p.text-2 {
     color: var(--neutral-2);
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width:580px) {
+    div.container {
+        width: 90vw;
+    }
+
 }
