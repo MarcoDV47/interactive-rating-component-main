@@ -1,0 +1,129 @@
+html {
+    font-family: 'Overpass', sans-serif;
+}
+
+main {
+    position: relative;
+    width: 33em;
+    height: 50vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--neutral-4);
+}
+
+div.container {
+    position: absolute;
+    background: linear-gradient(#212830, #171E28);
+    padding: 2em;
+    border-radius: 30px;
+    max-width: 33em;
+}
+
+div.rating-container img {
+    padding: 20px;
+    background-color: var(--neutral-3);
+    border-radius: 50%;
+    margin-bottom: 2em;
+}
+
+div.rating-container h1.heading-1 {
+    color: var(--neutral-1);
+    margin-bottom: 0.5em;
+}
+
+div.rating-container p.text-1 {
+    color: var(--neutral-2);
+    margin-bottom: 1em;
+}
+
+li.rating-item {
+    position: relative;
+    display: inline-block;
+}
+
+input[type="radio"] {
+    width: 60px;
+    height: 60px;
+    appearance: none;
+    background-color: var(--neutral-3);
+    border-radius: 50%;
+    margin: 0 1em 1em 1em;
+}
+
+input[type="radio"]:hover {
+    background-color: var(--primary-1);
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    background-color: var(--neutral-2);
+}
+
+label.rate-number {
+    position: absolute;
+    right: 50%;
+    bottom: 60%;
+    transform: translate(50%, 50%);
+    color: var(--neutral-2);
+    cursor: inherit;
+}
+
+input[type="radio"]:hover+label.rate-number,
+input[type="radio"]:checked+label.rate-number {
+    color: var(--neutral-1);
+    cursor: pointer;
+}
+
+button.btn-1 {
+    padding: 1.5em;
+    background-color: var(--primary-1);
+    border: 0;
+    border-radius: 25px;
+    width: 97%;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--neutral-1);
+    cursor: pointer;
+}
+
+button.btn-1:hover {
+    color: var(--primary-1);
+    background-color: var(--neutral-1);
+}
+
+/* Other part */
+
+.hidden {
+    display: none;
+}
+div.thanks-container {
+    max-width: 40em;
+    height: 25.5em;
+    text-align: center;
+    padding: 4em 2em;
+}
+
+div.thanks-container img {
+    margin-bottom: 1.5em;
+}
+div.thanks-container p.rating-text{
+    color: var(--primary-1);
+    width: max-content;
+    background-color: var(--neutral-3);
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    margin: 0 auto 2em;
+}
+div.thanks-container h2{
+    color: var(--neutral-1);
+    margin-bottom: 0.5em;
+}
+div.thanks-container p.text-2{
+    color: var(--neutral-2);
+}
